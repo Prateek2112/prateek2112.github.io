@@ -18,9 +18,13 @@ export interface Project {
 }
 
 export interface Education {
-  degree: string;
   institution: string;
+  degree: string;
   period: string;
+  gpa: string;
+  coursework: string;
+  thesis?: string;
+  accolades?: string;
   logoUrl: string;
 }
 

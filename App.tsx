@@ -39,9 +39,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-950 min-h-screen text-slate-300 flex flex-col">
+    <div className="min-h-screen text-slate-300 flex flex-col">
       <Header activeView={activeView} setActiveView={setActiveView} />
-      <main className={`flex-grow container mx-auto px-4 sm:px-6 lg:px-8 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <main className={`flex-grow transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         {renderContent()}
       </main>
       <Footer />

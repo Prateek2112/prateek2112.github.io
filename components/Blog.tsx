@@ -6,6 +6,7 @@ import Card from './Card';
 const Blog: React.FC = () => {
   return (
     <div className="py-16 sm:py-24 fade-in-up">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-4xl font-bold text-center mb-16 text-white">Blog</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {BLOG_POSTS_DATA.map((post, index) => (
@@ -19,6 +20,7 @@ const Blog: React.FC = () => {
             </div>
           </Card>
         ))}
+        </div>
       </div>
     </div>
   );

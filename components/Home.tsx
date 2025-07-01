@@ -39,23 +39,18 @@ const Home: React.FC<HomeProps> = ({ setActiveView }) => {
   return (
     <div className="fade-in-up">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center text-center text-white" style={{
-        backgroundImage: `url('https://picsum.photos/seed/hero-bg/1920/1080')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}>
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 p-4">
+      <section className="relative py-32 sm:py-40 text-center text-white bg-gradient-to-b from-slate-950 to-slate-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
             PRATEEK MISHRA
           </h1>
           <h2 className="mt-4 text-xl sm:text-2xl font-semibold tracking-wide gradient-text">
             DATA SCIENCE
           </h2>
-          <p className="mt-2 text-md sm:text-lg text-slate-300">
+          <p className="mt-6 max-w-3xl mx-auto text-md sm:text-lg text-slate-300">
             Data Science | Machine Learning Architecture | Natural Language Processing | Data Engineering | Predictive Analytics | Statistical Modeling | Time Series Forecasting
           </p>
-          <div className="mt-12 max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+          <div className="mt-12 max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left items-center">
               <div className="text-lg font-light">
                   <p className="text-3xl font-bold gradient-text">Hi, I'm Prateek Mishra and I love to code.</p>
               </div>
@@ -68,14 +63,15 @@ const Home: React.FC<HomeProps> = ({ setActiveView }) => {
 
       {/* Experience Section */}
       <section className="py-16 sm:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Experience</h2>
           <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12">
             {EXPERIENCE_DATA.map((exp) => (
               <div key={exp.company} className="text-center group">
-                <img src={exp.logoUrl} alt={`${exp.company} logo`} className="h-20 w-auto mx-auto grayscale group-hover:grayscale-0 transition-all duration-300"/>
+                <img src={exp.logoUrl} alt={`${exp.company} logo`} className="h-20 w-auto mx-auto transition-all duration-300 group-hover:scale-110"/>
                 <p className="mt-4 font-semibold text-white">{exp.role}</p>
-                <p className="text-slate-400 text-sm">{exp.company}</p>
+                <p className="text-black-400 text-sm">{exp.company}</p>
+                <p className ="text-black-500 text-xs mt-1">{exp.period}</p>
               </div>
             ))}
           </div>
@@ -84,7 +80,7 @@ const Home: React.FC<HomeProps> = ({ setActiveView }) => {
 
       {/* Projects Section */}
       <section className="py-16 sm:py-24 bg-slate-900">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
              {PROJECTS_DATA.slice(0, 6).map((project, index) => (
@@ -96,7 +92,7 @@ const Home: React.FC<HomeProps> = ({ setActiveView }) => {
 
       {/* Certifications Section */}
       <section className="py-16 sm:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Certifications</h2>
           <div className="flex flex-wrap justify-center gap-8">
             {CERTIFICATIONS_DATA.map(cert => (

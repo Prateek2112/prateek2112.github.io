@@ -4,6 +4,7 @@ import { PROJECTS_DATA } from '../constants';
 const Projects: React.FC = () => {
   return (
     <div className="py-16 sm:py-24 fade-in-up">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-4xl font-bold text-center mb-16 text-white">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {PROJECTS_DATA.map((project, index) => (
@@ -31,6 +32,7 @@ const Projects: React.FC = () => {
             </div>
         </div>
         ))}
+        </div>
       </div>
     </div>
   );
